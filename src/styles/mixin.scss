@@ -1,0 +1,50 @@
+@mixin heightMixin($height) {
+  height: $height;
+  line-height: $height - 2px;
+}
+
+@mixin radiusMixin ($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin backgroundMixin($url, $size, $position) {
+  background-image: url($url);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+
+@mixin lineEllipsisMixin($size, $lh, $show) {
+  display: block;
+  display: -webkit-box;
+  height: $size * $lh * $show;
+  margin: 0 auto;
+  word-break: break-all;
+  font-size: $size;
+  line-height: $lh;
+  -webkit-line-clamp: $show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin maxLineEllipsisMixin($size, $lh, $show) {
+  display: block;
+  display: -webkit-box;
+  max-height: $size * $lh * $show;
+  margin: 0 auto;
+  word-break: break-all;
+  font-size: $size;
+  line-height: $lh;
+  -webkit-line-clamp: $show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin opacityMixin($opc) {
+  opacity: $opc;
+  filter: alpha(opacity=$opc * 100);
+}
