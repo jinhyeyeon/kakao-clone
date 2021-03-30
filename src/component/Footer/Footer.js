@@ -7,7 +7,7 @@ import {AiOutlineShopping} from 'react-icons/ai';
 import {MENU_HOME, MENU_CHATTING, MENU_TAG, MENU_SHOP, MENU_MORE} from '../../constants/menu';
 import { Link } from 'react-router-dom';
 
-const Footer = ({on, onClick}) => {
+const Footer = ({on}) => {
   return (
     <ul className="footer clearfix">
       <li
