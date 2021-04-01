@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
+        <Header title="친구" />
         <Switch>
           <Route exact path="/" component={Friend} />
           <Route path="/chat" component={Chat} />
