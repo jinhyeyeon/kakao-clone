@@ -1,13 +1,14 @@
+import classNames from 'classnames';
 import React from 'react';
 import './profile.scss';
 
-const Profile = ({profileImg, onClick}) => {
+const Profile = ({profileImg, onClick, large}) => {
 
   return (
     <div
-      className="profile"
+      className={classNames("profile", {large})}
       onClick={onClick}
-      style={{backgroundImage: `url(${profileImg || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'})`}}
+      style={{backgroundImage: `url(${profileImg || 'https://blog.kakaocdn.net/dn/cyOIpg/btqx7JTDRTq/1fs7MnKMK7nSbrM9QTIbE1/img.jpg'})`}}
     />
   )
 }

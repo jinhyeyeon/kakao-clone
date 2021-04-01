@@ -1,0 +1,36 @@
+.profile-item {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  & > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .profile-info {
+    margin-left: 10px;
+    width: calc(100% - 60px);
+
+    h2 {
+      position: relative;
+      font-size: 15px;
+      color: #333;
+    }
+
+    p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .date {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      font-size: 12px;
+      color: #666;
+    }
+  }
+}

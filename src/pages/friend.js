@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../component/Header/Header';
+import ProfileItem from '../component/ProfileItem/ProfileItem';
 
 class Friend extends React.Component {
   state = {};
@@ -9,7 +9,7 @@ class Friend extends React.Component {
 
     return (
       <div className="friend">
-        Friend
+        <ProfileItem />
       </div>
     );
   }
