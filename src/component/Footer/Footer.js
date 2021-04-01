@@ -20,7 +20,7 @@ const Footer = ({on}) => {
       <li
         on={on === MENU_CHATTING}
       >
-        <Link to="/">
+        <Link to="/chat">
           <IoChatbubbleOutline />
         </Link>
       </li>

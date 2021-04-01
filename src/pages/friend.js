@@ -1,16 +1,17 @@
-
 import React from 'react';
+import Header from '../component/Header/Header';
 
-class friend extends React.Component {
-  state = {}
+class Friend extends React.Component {
+  state = {};
 
   render() {
-      const {} = this.state;
-      return (
-          <div>
-             
-          </div>
-      )
+    const {} = this.state;
+
+    return (
+      <div className="friend">
+        Friend
+      </div>
+    );
   }
 }
-export default friend;
+export default Friend;
