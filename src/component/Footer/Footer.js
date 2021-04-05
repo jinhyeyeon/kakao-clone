@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './footer.scss';
 import {FiUser, FiMoreHorizontal} from 'react-icons/fi';
 import {IoChatbubbleOutline} from 'react-icons/io5';

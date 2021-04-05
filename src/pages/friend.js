@@ -3,17 +3,36 @@ import ProfileItem from '../component/ProfileItem/ProfileItem';
 import {IoIosArrowUp} from 'react-icons/io';
 import '../styles/friend.scss';
 import classNames from 'classnames';
+import { MENU_HOME } from '../constants/menu';
 
 class Friend extends React.Component {
   state = {
-    Toggle: true
+    Toggle: true,
+    friends: [
+      {
+        id: 1,
+        name: '송씨',
+        text: 'But꽃'
+      },
+      {
+        id: 2,
+        name: '카카오봇',
+      },
+      {
+        id: 3,
+        name: '테스트',
+        text: '곤피곤피 얼른 집에가고 싶다! 퇴근을 원한다!'
+      }
+    ],
   };
 
   render() {
-    const {Toggle} = this.state;
+    const {Toggle, friends} = this.state;
 
     return (
-      <div className="friend">
+      <div 
+        className="friend"
+      >
         <div className="my-profile-list">
           <ProfileItem
             name="지네"
@@ -33,17 +52,13 @@ class Friend extends React.Component {
           </h2>
           {Toggle && (
             <ul>
-              <li>
+              {friends.map(friend => 
+              <li key={friend.id}>
                 <ProfileItem 
-                  name="송씨"
+                  {...friend}
                 />
               </li>
-              <li>
-                <ProfileItem
-                  name="이름없음"
-                  text="어쩌라고"
-                />
-              </li>
+              )}
             </ul>
           )}
         </div>

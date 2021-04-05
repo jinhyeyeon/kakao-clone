@@ -2,7 +2,7 @@ import React from 'react';
 import './profile-item.scss';
 import Profile from '../Profile/Profile';
 
-const ProfileItem = ({profileImg, name, text, date, large, onClick}) => {
+const ProfileItem = ({profileImg, name, text, date, large, medium, onClick}) => {
   return (
     <div
       className="profile-item"
@@ -11,6 +11,7 @@ const ProfileItem = ({profileImg, name, text, date, large, onClick}) => {
       <Profile
         profileImg={profileImg}
         large={large}
+        medium={medium}
       />
 
       <div className="profile-info">
