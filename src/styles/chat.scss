@@ -1,4 +1,17 @@
+@import './mixin.scss';
+
 .chat {
+  width: 100%;
+  height: calc(100% - 100px);
   padding: 0 20px;
-  border: 1px solid red;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  ul {
+    height: 100%;
+  }
+
+  p {
+    @include maxLineEllipsisMixin(13px, 1.5, 2);
+  }
 }

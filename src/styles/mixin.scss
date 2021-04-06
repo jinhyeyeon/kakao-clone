@@ -36,6 +36,7 @@
   max-height: $size * $lh * $show;
   margin: 0 auto;
   word-break: break-all;
+  white-space: normal;
   font-size: $size;
   line-height: $lh;
   -webkit-line-clamp: $show;
