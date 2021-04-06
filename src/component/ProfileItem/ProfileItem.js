@@ -1,6 +1,6 @@
 import React from 'react';
-import './profile-item.scss';
 import Profile from '../Profile/Profile';
+import './profile-item.scss';
 
 const ProfileItem = ({profileImg, name, text, date, large, medium, onClick}) => {
   return (
