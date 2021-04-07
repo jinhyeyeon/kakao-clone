@@ -1,10 +1,8 @@
 
 import React from 'react';
+import {Link} from 'react-router-dom';
 import ProfileItem from '../component/ProfileItem/ProfileItem';
-import {formatDistance, subDays} from 'date-fns';
-import ko from "date-fns/locale/ko";
 import '../styles/chat.scss';
-import { Link } from 'react-router-dom';
 
 class Chat extends React.Component {
   state = {
@@ -22,27 +20,26 @@ class Chat extends React.Component {
       {
         id: 3,
         name: '전남친',
-        text: '자니?'
-      }
+        text: '자니?',
+        date: '2021-01-01'
+      },
     ],
   }
 
   render() {
     const {chattings} = this.state;
-    var result = formatDistance(subDays(new Date(), 3), new Date(), {addSuffix: true, locale: ko})
     return (
       <div className="chat">
         <ul>
           {chattings.map(chatting => 
-          <li key={chatting.id}>
-            <Link to={`/chat/${chatting.id}`}>
-              <ProfileItem 
-                medium
-                date={result}
-                {...chatting}
-              />
-            </Link>
-          </li>
+            <li key={chatting.id}>
+              <Link to={`/chat/${chatting.id}`}>
+                <ProfileItem 
+                  medium
+                  {...chatting}
+                />
+              </Link>
+            </li>
           )}
         </ul>
       </div>

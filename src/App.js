@@ -6,6 +6,7 @@ import Chat from './pages/chat';
 import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
 import { MENU_HOME } from './constants/menu';
+import ChattingRoom from './pages/chattingRoom';
 
 class App extends React.Component {
   state = {
