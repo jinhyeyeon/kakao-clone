@@ -1,0 +1,16 @@
+.chatting-room {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  background-color: #c1d0db;
+  z-index: 100;
+  box-sizing: border-box;
+
+  .chatting-room-list {
+    height: calc(100% - 100px);
+    overflow-y: auto;
+  }
+}

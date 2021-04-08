@@ -2,6 +2,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ProfileItem from '../component/ProfileItem/ProfileItem';
+import ChattingRoom from '../component/ChattingRoom/ChattingRoom';
 import '../styles/chat.scss';
 
 class Chat extends React.Component {
@@ -30,7 +31,8 @@ class Chat extends React.Component {
     const {chattings} = this.state;
     return (
       <div className="chat">
-        <ul>
+        <ChattingRoom />
+        <ul className="chatting-list">
           {chattings.map(chatting => 
             <li key={chatting.id}>
               <Link to={`/chat/${chatting.id}`}>
