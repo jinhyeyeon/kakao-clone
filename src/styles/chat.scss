@@ -10,8 +10,4 @@
   ul {
     height: 100%;
   }
-
-  p {
-    @include maxLineEllipsisMixin(13px, 1.5, 2);
-  }
 }
