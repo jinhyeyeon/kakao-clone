@@ -1,6 +1,7 @@
 import React from 'react';
 import CahttingItem from '../ChattingItem/ChattingItem';
 import SubHeader from '../SubHeader/SubHeader';
+import ChattingInput from '../ChattingInput/ChattingInput';
 import './chatting-room.scss';
 
 class ChattingRoom extends React.Component {
@@ -26,6 +27,7 @@ class ChattingRoom extends React.Component {
             />
           </li>
         </ul>
+        <ChattingInput />
       </div>
     )
   }

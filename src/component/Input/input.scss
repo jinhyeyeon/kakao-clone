@@ -1,0 +1,36 @@
+.input {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ddd;
+  background-color: #f7f6f6;
+  box-sizing: border-box; 
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 13px;
+    background-color: transparent;
+    box-sizing: border-box; 
+  }
+
+  &.is-icon {
+    padding-right: 30px;
+
+    span {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      padding: 6px;
+      line-height: 1;
+      vertical-align: middle;
+      font-size: 15px;
+      cursor: pointer;
+
+      svg {
+        vertical-align: middle;
+      }
+    }
+  }
+}

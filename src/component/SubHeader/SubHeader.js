@@ -4,6 +4,7 @@ import {FiSearch} from 'react-icons/fi';
 import {IoIosArrowBack} from 'react-icons/io';
 import {AiOutlineMenu} from "react-icons/ai";
 import './sub-header.scss';
+import Btn from '../Btn/Btn';
 
 const SubHeader = ({name}) => {
 
@@ -11,11 +12,9 @@ const SubHeader = ({name}) => {
     <div className="sub-header clearfix">
       <h2>{name}</h2>
 
-      <button className="btn-back">
-        <span>
-          <IoIosArrowBack /> 29
-        </span>
-      </button>
+      <Btn className="btn-back">
+        <IoIosArrowBack /> 29
+      </Btn>
 
       <ul className="sub-nav">
         <li>
