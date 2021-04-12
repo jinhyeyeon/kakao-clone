@@ -1,6 +1,7 @@
 import React from 'react';
 import {VscSmiley} from "react-icons/vsc";
 import {IoCloseOutline} from 'react-icons/io5';
+import {AiOutlineEnter} from 'react-icons/ai';
 import classNames from 'classnames';
 import './input.scss';
 
@@ -26,9 +27,14 @@ class Input extends React.Component {
         )}
 
         {isChat && (
-          <span className="icon-emoticon">
-            <VscSmiley />
-          </span>
+          <>
+            <span className="icon-emoticon">
+              <VscSmiley />
+            </span>
+            <span className="icon-save">
+              <AiOutlineEnter />
+            </span>
+          </>
         )}
       </div>
     )

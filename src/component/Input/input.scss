@@ -16,7 +16,7 @@
   }
 
   &.is-icon {
-    padding-right: 30px;
+    padding-right: 60px;
 
     span {
       position: absolute;
@@ -30,6 +30,10 @@
 
       svg {
         vertical-align: middle;
+      }
+
+      &.icon-save {
+        right: 34px;
       }
     }
   }
