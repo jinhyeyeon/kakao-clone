@@ -11,28 +11,37 @@ class Input extends React.Component {
       placeholder,
       isClear,
       isChat,
+      value,
+      onChange,
+      onClick,
       className
     } = this.props;
+
     return (
       <div className={classNames('input', className, {'is-icon': isChat || isClear})}>
         <input
           type="text"
+          value={value}
+          onChange={onChange}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              onClick();
+            }
+          }}
           placeholder={placeholder}
         />
-
         {isClear && (
           <span className="icon-clear">
             <IoCloseOutline />
           </span>
         )}
-
         {isChat && (
           <>
             <span className="icon-emoticon">
               <VscSmiley />
             </span>
             <span className="icon-save">
-              <AiOutlineEnter />
+              <AiOutlineEnter onClick={onClick} />
             </span>
           </>
         )}
