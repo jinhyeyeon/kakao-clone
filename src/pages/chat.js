@@ -7,6 +7,7 @@ import '../styles/chat.scss';
 
 class Chat extends React.Component {
   state = {
+    roomOpen: false,
     chattings: [
       {
         id: 1,
@@ -28,13 +29,20 @@ class Chat extends React.Component {
   }
 
   render() {
-    const {chattings} = this.state;
+    const {chattings, roomOpen} = this.state;
     return (
       <div className="chat">
-        <ChattingRoom />
+        {roomOpen && 
+          <ChattingRoom
+            onClose={() => this.setState({roomOpen: false})}
+          />
+        }
         <ul className="chatting-list">
           {chattings.map(chatting => 
-            <li key={chatting.id}>
+            <li
+              key={chatting.id}
+              onClick={() => this.setState({roomOpen: !roomOpen})}
+            >
               <Link to={`/chat/${chatting.id}`}>
                 <ProfileItem 
                   medium

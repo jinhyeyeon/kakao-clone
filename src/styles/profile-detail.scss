@@ -1,0 +1,37 @@
+.friend {
+  height: calc(100% - 100px);
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  .my-profile-list {
+    padding: 0 20px;
+  }
+  
+  .friend-list {
+    padding: 0 20px;
+  
+    & > h2 {
+      position: relative;
+      padding: 15px 0 7px;
+      font-size: 13px;
+      color: #666;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        right: 0;
+        top: 16px;
+        font-size: 11px;
+
+        &.close {
+          transform: rotate(180deg);
+          top: 14px;
+        }
+      }
+    }
+
+    li + li {
+      border-top: 1px solid #eee;
+    }
+  }
+}

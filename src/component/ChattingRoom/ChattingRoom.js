@@ -12,16 +12,26 @@ class ChattingRoom extends React.Component {
   state = {
     input: '',
     list: [
-      {isMe: false, name: '이름없음', text: "ㅇ ㅁㅎ? ㅍㅅㅂ ㄱㄱ"},
-      {isMe: true, text: "안녕하세요!"},
+      {
+        isMe: false,
+        name: '이름없음',
+        text: "ㅇ ㅁㅎ? ㅍㅅㅂ ㄱㄱ"
+      },
+      {
+        isMe: true,
+        text: "안녕하세요!"
+      },
     ],
   }
 
   render() {
     const {list, input} = this.state;
+    const {onClose} = this.props;
     return (
       <div className="chatting-room">
-        <SubHeader />
+        <SubHeader
+          onClick={onClose}
+        />
         <ul className="chatting-room-list">
           {list.map((item, idx) => (
             <li key={idx}>

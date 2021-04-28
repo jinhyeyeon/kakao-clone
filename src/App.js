@@ -5,6 +5,7 @@ import Friend from './pages/friend';
 import Chat from './pages/chat';
 import Footer from './component/Footer/Footer';
 import Header from './component/Header/Header';
+import Profile from './component/Profile/Profile';
 class App extends React.Component {
   state = {
 
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render={(props) => <Friend {...props}/> }/>
             <Route path="/chat" component={Chat} />
+            <Route path="/profile/detail" component={Profile} />
           </Switch>
           <Footer />
         </div>
